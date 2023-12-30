@@ -1,15 +1,24 @@
 {
-	"name": "fcc-learn-npm-package-json",
-	"dependencies": {
-		"express": "^4.14.0"
-	},
-	"main": "server.js",
-	"scripts": {
-		"start": "node server.js"
-	},
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/pt1602/freecode-camp-boilerplate-npm.git"
-	},
-	"author": "Philipp Tuchardt"
+    "name": "fcc-learn-npm-package-json",
+    "dependencies": {
+        "express": "^4.14.0",
+		"@freecodecamp/example": "1.2.13"
+    },
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/pt1602/freecode-camp-boilerplate-npm.git"
+    },
+    "author": "Philipp Tuchardt",
+    "description": "A repository for the freecodecamp back-end-development-and-apis course",
+    "keywords": [
+        "free",
+        "code",
+        "camp"
+    ],
+	"license": "MIT",
+	"version": "1.0.0"
 }

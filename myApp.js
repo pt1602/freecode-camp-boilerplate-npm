@@ -29,6 +29,13 @@ app.get("/now", (req, res, next) => {
     }
 );
 
+app.get("/:word/echo/", (req, res) => {
+        res.send({
+            echo: req.params.word
+        });
+    }
+);
+
 app.get("/json", (req, res) => {
     if (process.env.MESSAGE_STYLE === 'uppercase') {
         jsonResponse.message = jsonResponse.message.toUpperCase()

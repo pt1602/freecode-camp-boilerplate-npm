@@ -9,9 +9,18 @@ jsonResponse = {"message": "Hello json"}
 
 app.use("/public", express.static(assets));
 
+app.get("/", (req, res) => {
+    res.sendFile(indexPage)
+})
+
 app.get("*", (req, res, next) => {
     console.log(req.method + ' ' + req.path + ' - ' + req.ip);
-    next();
+    next()
+})
+
+app.get("/now", (req, res) => {
+    req.time = new Date().toString()
+    res.json({time: req.time})
 })
 
 app.get("/json", (req, res) => {

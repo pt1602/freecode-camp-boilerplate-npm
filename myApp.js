@@ -44,4 +44,10 @@ app.get("/json", (req, res) => {
     res.json(jsonResponse)
 })
 
+app.route("/name").get((req, res) => {
+    res.json({
+        name: `${req.query.first} ${req.query.last}`
+    });
+})
+
 module.exports = app

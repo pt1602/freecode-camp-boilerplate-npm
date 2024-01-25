@@ -1,5 +1,6 @@
 require('dotenv').config()
 
+let bodyParser = require('body-parser')
 let express = require('express');
 let app = express();
 
@@ -8,6 +9,10 @@ indexPage = __dirname + '/views/index.html'
 jsonResponse = {"message": "Hello json"}
 
 app.use("/public", express.static(assets));
+
+bodyParser.urlencoded({
+    extended: false
+})
 
 app.get("/", (req, res) => {
     res.sendFile(indexPage)

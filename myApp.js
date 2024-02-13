@@ -48,10 +48,15 @@ app.get("/json", (req, res) => {
     res.json(jsonResponse)
 })
 
-app.route("/name").get((req, res) => {
-    res.json({
-        name: `${req.query.first} ${req.query.last}`
-    });
-})
+// app.route("/name").get((req, res) => {
+//     res.json({
+//         name: `${req.query.first} ${req.query.last}`
+//     });
+// })
+
+app.post("/name", function(req, res) {
+    let string = req.body.first + " " + req.body.last;
+    res.json({ name: string });
+});
 
 module.exports = app
